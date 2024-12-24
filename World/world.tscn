@@ -1,0 +1,110 @@
+[gd_scene load_steps=21 format=3 uid="uid://cty80w30vevb0"]
+
+[ext_resource type="Texture2D" uid="uid://d0j2yxlwpo0f2" path="res://Textures/dirt_full_new.png" id="1_3ke4t"]
+[ext_resource type="PackedScene" uid="uid://c1dcyhq35xb6s" path="res://Player/player.tscn" id="2_iymx1"]
+[ext_resource type="PackedScene" uid="uid://cvgv7qim8fbux" path="res://Utility/enemy_spawner.tscn" id="3_wxfww"]
+[ext_resource type="Script" path="res://Utility/spawn_info.gd" id="4_gc2hq"]
+[ext_resource type="PackedScene" uid="uid://b0qwghv0skie4" path="res://Enemy/enemy_kobold_weak.tscn" id="5_k1xid"]
+[ext_resource type="PackedScene" uid="uid://br0j8krsq33n3" path="res://Enemy/enemy_kobold_strong.tscn" id="6_qeavk"]
+[ext_resource type="PackedScene" uid="uid://3l64i71uyvqg" path="res://Enemy/enemy_cyclops.tscn" id="7_56g68"]
+[ext_resource type="PackedScene" uid="uid://ckuibdows6fxb" path="res://Enemy/enemy_juggernaut.tscn" id="8_q8hoy"]
+[ext_resource type="PackedScene" uid="uid://bkb361qxffvrp" path="res://Enemy/enemy_super.tscn" id="9_hxrcg"]
+[ext_resource type="AudioStream" uid="uid://dtabo12ow4oh7" path="res://Audio/Music/DavidKBD - Pink Bloom Pack - 07 - The Hidden One.ogg" id="10_84wli"]
+[ext_resource type="Script" path="res://Audio/Music/snd_music.gd" id="11_n3rdf"]
+
+[sub_resource type="Resource" id="Resource_xwkqo"]
+script = ExtResource("4_gc2hq")
+time_start = 0
+time_end = 30
+enemy = ExtResource("5_k1xid")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_p5ubv"]
+script = ExtResource("4_gc2hq")
+time_start = 30
+time_end = 201
+enemy = ExtResource("5_k1xid")
+enemy_num = 2
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_1585b"]
+script = ExtResource("4_gc2hq")
+time_start = 60
+time_end = 180
+enemy = ExtResource("6_qeavk")
+enemy_num = 1
+enemy_spawn_delay = 1
+
+[sub_resource type="Resource" id="Resource_287ah"]
+script = ExtResource("4_gc2hq")
+time_start = 180
+time_end = 210
+enemy = ExtResource("7_56g68")
+enemy_num = 1
+enemy_spawn_delay = 2
+
+[sub_resource type="Resource" id="Resource_g4a8o"]
+script = ExtResource("4_gc2hq")
+time_start = 210
+time_end = 240
+enemy = ExtResource("6_qeavk")
+enemy_num = 2
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_iiop1"]
+script = ExtResource("4_gc2hq")
+time_start = 240
+time_end = 270
+enemy = ExtResource("7_56g68")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_26k8h"]
+script = ExtResource("4_gc2hq")
+time_start = 240
+time_end = 241
+enemy = ExtResource("8_q8hoy")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_tsjqo"]
+script = ExtResource("4_gc2hq")
+time_start = 270
+time_end = 300
+enemy = ExtResource("6_qeavk")
+enemy_num = 4
+enemy_spawn_delay = 0
+
+[sub_resource type="Resource" id="Resource_2h4kg"]
+script = ExtResource("4_gc2hq")
+time_start = 299
+time_end = 300
+enemy = ExtResource("9_hxrcg")
+enemy_num = 1
+enemy_spawn_delay = 0
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 2
+texture_repeat = 2
+texture = ExtResource("1_3ke4t")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 4000)
+
+[node name="Player" parent="." instance=ExtResource("2_iymx1")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("3_wxfww")]
+spawns = Array[ExtResource("4_gc2hq")]([SubResource("Resource_xwkqo"), SubResource("Resource_p5ubv"), SubResource("Resource_1585b"), SubResource("Resource_287ah"), SubResource("Resource_g4a8o"), SubResource("Resource_iiop1"), SubResource("Resource_26k8h"), SubResource("Resource_tsjqo"), SubResource("Resource_2h4kg")])
+
+[node name="Loot" type="Node2D" parent="." groups=["Loot"]]
+
+[node name="snd_Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("10_84wli")
+volume_db = -15.0
+autoplay = true
+script = ExtResource("11_n3rdf")
+
+[connection signal="playerdeath" from="Player" to="snd_Music" method="_on_player_playerdeath"]
