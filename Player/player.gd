@@ -69,6 +69,8 @@ var enemy_close = []
 
 @onready var deathPanel = get_node("%DeathPanel")
 @onready var lblResult = get_node("%lbl_Result")
+@onready var imgVictory = get_node("%img_victory")
+@onready var imgLose = get_node("%img_lose")
 @onready var sndVictory = get_node("%snd_victory")
 @onready var sndLose = get_node("%snd_lose")
 
@@ -374,9 +376,11 @@ func death():
 	tween.play()
 	if time >= 300:
 		lblResult.text = "You Win"
+		imgVictory.show()
 		sndVictory.play()
 	else:
 		lblResult.text = "You Lose"
+		imgLose.show()
 		sndLose.play()
 		
 	

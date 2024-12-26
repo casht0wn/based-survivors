@@ -1,14 +1,16 @@
-[gd_scene load_steps=22 format=3 uid="uid://c1dcyhq35xb6s"]
+[gd_scene load_steps=24 format=3 uid="uid://c1dcyhq35xb6s"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_lj1l8"]
 [ext_resource type="Texture2D" uid="uid://bn86t6qypff33" path="res://Textures/Player/BasedPepe0x52_walk.png" id="2_2l1rd"]
 [ext_resource type="PackedScene" uid="uid://557palaat35p" path="res://Utility/hurtbox.tscn" id="3_tna6h"]
 [ext_resource type="Texture2D" uid="uid://cvfj55b8j1t6b" path="res://Textures/GUI/exp_background.png" id="4_idfju"]
 [ext_resource type="Texture2D" uid="uid://ckumgxmeld8al" path="res://Textures/GUI/exp_progress.png" id="5_rfpw6"]
-[ext_resource type="AudioStream" uid="uid://dv1y67v81ym3s" path="res://Audio/SoundEffect/levelup.ogg" id="7_6a7yk"]
 [ext_resource type="Texture2D" uid="uid://7h5rqjgwdfu5" path="res://Textures/GUI/healthbar.png" id="8_557qh"]
+[ext_resource type="AudioStream" uid="uid://bn1sigua17psj" path="res://Audio/SoundEffect/anime-wow-sound-effect-mp3cut.mp3" id="8_qbl3g"]
 [ext_resource type="AudioStream" uid="uid://6e5syikbifq6" path="res://Audio/SoundEffect/sonic-extra-life.mp3" id="9_j1ha1"]
+[ext_resource type="Texture2D" uid="uid://baapn7jjg8chd" path="res://Textures/BasedPepe_Pointing.png" id="9_krem7"]
 [ext_resource type="Texture2D" uid="uid://bbuvtk0dt3d6n" path="res://Textures/GUI/health.png" id="9_ydo0t"]
+[ext_resource type="Texture2D" uid="uid://2mwi8w7m1um1" path="res://Textures/BasedPepe_Lose.png" id="10_34hxa"]
 [ext_resource type="AudioStream" uid="uid://c0gn66kn48fdv" path="res://Audio/SoundEffect/gmod-death.mp3" id="10_uce3s"]
 [ext_resource type="PackedScene" uid="uid://cg1jppshpj4ig" path="res://Utility/basic_button.tscn" id="12_e3w0m"]
 
@@ -29,18 +31,23 @@ radius = 50.0
 
 [sub_resource type="SystemFont" id="SystemFont_3p08k"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_6um13"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_txcix"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_atx18"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_6xgra"]
 font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 motion_mode = 1
@@ -123,8 +130,8 @@ offset_bottom = 360.0
 [node name="ExperienceBar" type="TextureProgressBar" parent="GUILayer/GUI"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 640.0
+offset_bottom = 21.0
 texture_under = ExtResource("4_idfju")
 texture_progress = ExtResource("5_rfpw6")
 
@@ -180,8 +187,8 @@ offset_bottom = 100.0
 
 [node name="snd_levelup" type="AudioStreamPlayer" parent="GUILayer/GUI/LevelUp"]
 unique_name_in_owner = true
-stream = ExtResource("7_6a7yk")
-volume_db = -10.0
+stream = ExtResource("8_qbl3g")
+volume_db = -15.0
 
 [node name="DeathPanel" type="Panel" parent="GUILayer/GUI"]
 unique_name_in_owner = true
@@ -202,6 +209,44 @@ theme_override_fonts/font = SubResource("SystemFont_txcix")
 text = "Result"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="img_victory" type="TextureRect" parent="GUILayer/GUI/DeathPanel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -67.6983
+offset_right = 63.5
+offset_bottom = 67.6983
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_krem7")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="img_lose" type="TextureRect" parent="GUILayer/GUI/DeathPanel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -66.0
+offset_right = 100.5
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_34hxa")
+expand_mode = 5
+stretch_mode = 5
 
 [node name="snd_victory" type="AudioStreamPlayer" parent="GUILayer/GUI/DeathPanel"]
 unique_name_in_owner = true
