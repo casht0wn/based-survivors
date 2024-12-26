@@ -14,7 +14,7 @@ const UPGRADES = {
 	"icespear2": {
 		"icon": WEAPON_PATH + "ice_spear.png",
 		"displayname": "Ice Spear",
-		"details": "An additional Ice Spear is thrown",
+		"details": "+1 Ice Spear is thrown",
 		"level": "Level: 2",
 		"prerequisite": ["icespear1"],
 		"type": "weapon"
@@ -22,7 +22,7 @@ const UPGRADES = {
 	"icespear3": {
 		"icon": WEAPON_PATH + "ice_spear.png",
 		"displayname": "Ice Spear",
-		"details": "Ice Spears now pass through another enemy and do + 3 damage",
+		"details": "Ice Spears pass through +1 enemy and do +3 damage",
 		"level": "Level: 3",
 		"prerequisite": ["icespear2"],
 		"type": "weapon"
@@ -30,7 +30,7 @@ const UPGRADES = {
 	"icespear4": {
 		"icon": WEAPON_PATH + "ice_spear.png",
 		"displayname": "Ice Spear",
-		"details": "An additional 2 Ice Spears are thrown",
+		"details": "+ 2 Ice Spears are thrown",
 		"level": "Level: 4",
 		"prerequisite": ["icespear3"],
 		"type": "weapon"
@@ -38,7 +38,7 @@ const UPGRADES = {
 	"javelin1": {
 		"icon": WEAPON_PATH + "javelin_3_new_attack.png",
 		"displayname": "Javelin",
-		"details": "A magical javelin will follow you attacking enemies in a straight line",
+		"details": "A javelin attacks enemies in a straight line",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "weapon"
@@ -46,7 +46,7 @@ const UPGRADES = {
 	"javelin2": {
 		"icon": WEAPON_PATH + "javelin_3_new_attack.png",
 		"displayname": "Javelin",
-		"details": "The javelin will now attack an additional enemy per attack",
+		"details": "The javelin attacks +1 enemy per attack",
 		"level": "Level: 2",
 		"prerequisite": ["javelin1"],
 		"type": "weapon"
@@ -54,7 +54,7 @@ const UPGRADES = {
 	"javelin3": {
 		"icon": WEAPON_PATH + "javelin_3_new_attack.png",
 		"displayname": "Javelin",
-		"details": "The javelin will attack another additional enemy per attack",
+		"details": "The javelin attacks +2 enemies per attack",
 		"level": "Level: 3",
 		"prerequisite": ["javelin2"],
 		"type": "weapon"
@@ -62,7 +62,7 @@ const UPGRADES = {
 	"javelin4": {
 		"icon": WEAPON_PATH + "javelin_3_new_attack.png",
 		"displayname": "Javelin",
-		"details": "The javelin now does + 5 damage per attack and causes 20% additional knockback",
+		"details": "The javelin does +5 damage and causes +20% knockback",
 		"level": "Level: 4",
 		"prerequisite": ["javelin3"],
 		"type": "weapon"
@@ -70,7 +70,7 @@ const UPGRADES = {
 	"tornado1": {
 		"icon": WEAPON_PATH + "tornado.png",
 		"displayname": "Tornado",
-		"details": "A tornado is created and randomly heads somewhere in the players direction",
+		"details": "A tornado is created in the players direction",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "weapon"
@@ -78,7 +78,7 @@ const UPGRADES = {
 	"tornado2": {
 		"icon": WEAPON_PATH + "tornado.png",
 		"displayname": "Tornado",
-		"details": "An additional Tornado is created",
+		"details": "+1 Tornado is created",
 		"level": "Level: 2",
 		"prerequisite": ["tornado1"],
 		"type": "weapon"
@@ -86,7 +86,7 @@ const UPGRADES = {
 	"tornado3": {
 		"icon": WEAPON_PATH + "tornado.png",
 		"displayname": "Tornado",
-		"details": "The Tornado cooldown is reduced by 0.5 seconds",
+		"details": "Tornado cooldown -0.5 seconds",
 		"level": "Level: 3",
 		"prerequisite": ["tornado2"],
 		"type": "weapon"
@@ -94,7 +94,7 @@ const UPGRADES = {
 	"tornado4": {
 		"icon": WEAPON_PATH + "tornado.png",
 		"displayname": "Tornado",
-		"details": "An additional tornado is created and the knockback is increased by 25%",
+		"details": "+1 Tornado and +25% knockback",
 		"level": "Level: 4",
 		"prerequisite": ["tornado3"],
 		"type": "weapon"
@@ -102,7 +102,7 @@ const UPGRADES = {
 	"armor1": {
 		"icon": ICON_PATH + "helmet_1.png",
 		"displayname": "Armor",
-		"details": "Reduces Damage By 1 point",
+		"details": "Reduces damage by 1 point",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "upgrade"
@@ -110,7 +110,7 @@ const UPGRADES = {
 	"armor2": {
 		"icon": ICON_PATH + "helmet_2.png",
 		"displayname": "Armor",
-		"details": "Reduces Damage By an additional 1 point",
+		"details": "Reduces damage by 2 points",
 		"level": "Level: 2",
 		"prerequisite": ["armor1"],
 		"type": "upgrade"
@@ -118,7 +118,7 @@ const UPGRADES = {
 	"armor3": {
 		"icon": ICON_PATH + "helmet_3.png",
 		"displayname": "Armor",
-		"details": "Reduces Damage By an additional 1 point",
+		"details": "Reduces damage by 3 points",
 		"level": "Level: 3",
 		"prerequisite": ["armor2"],
 		"type": "upgrade"
@@ -126,7 +126,7 @@ const UPGRADES = {
 	"armor4": {
 		"icon": ICON_PATH + "helmet_4.png",
 		"displayname": "Armor",
-		"details": "Reduces Damage By an additional 1 point",
+		"details": "Reduces damage by 4 points",
 		"level": "Level: 4",
 		"prerequisite": ["armor3"],
 		"type": "upgrade"
@@ -134,7 +134,7 @@ const UPGRADES = {
 	"speed1": {
 		"icon": ICON_PATH + "boots_1.png",
 		"displayname": "Speed",
-		"details": "Movement Speed Increased by 50% of base speed",
+		"details": "Movement speed +50%",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "upgrade"
@@ -142,7 +142,7 @@ const UPGRADES = {
 	"speed2": {
 		"icon": ICON_PATH + "boots_2.png",
 		"displayname": "Speed",
-		"details": "Movement Speed Increased by an additional 50% of base speed",
+		"details": "Movement speed +100%",
 		"level": "Level: 2",
 		"prerequisite": ["speed1"],
 		"type": "upgrade"
@@ -150,7 +150,7 @@ const UPGRADES = {
 	"speed3": {
 		"icon": ICON_PATH + "boots_3.png",
 		"displayname": "Speed",
-		"details": "Movement Speed Increased by an additional 50% of base speed",
+		"details": "Movement speed +150%",
 		"level": "Level: 3",
 		"prerequisite": ["speed2"],
 		"type": "upgrade"
@@ -158,7 +158,7 @@ const UPGRADES = {
 	"speed4": {
 		"icon": ICON_PATH + "boots_4.png",
 		"displayname": "Speed",
-		"details": "Movement Speed Increased an additional 50% of base speed",
+		"details": "Movement speed +200%",
 		"level": "Level: 4",
 		"prerequisite": ["speed3"],
 		"type": "upgrade"
@@ -166,7 +166,7 @@ const UPGRADES = {
 	"tome1": {
 		"icon": ICON_PATH + "book_1.png",
 		"displayname": "Tome",
-		"details": "Increases the size of attacks an additional 10% of their base size",
+		"details": "Attack Size +10%",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "upgrade"
@@ -174,7 +174,7 @@ const UPGRADES = {
 	"tome2": {
 		"icon": ICON_PATH + "book_2.png",
 		"displayname": "Tome",
-		"details": "Increases the size of attacks an additional 10% of their base size",
+		"details": "Attack Size +20%",
 		"level": "Level: 2",
 		"prerequisite": ["tome1"],
 		"type": "upgrade"
@@ -182,7 +182,7 @@ const UPGRADES = {
 	"tome3": {
 		"icon": ICON_PATH + "book_3.png",
 		"displayname": "Tome",
-		"details": "Increases the size of attacks an additional 10% of their base size",
+		"details": "Attack Size +30%",
 		"level": "Level: 3",
 		"prerequisite": ["tome2"],
 		"type": "upgrade"
@@ -190,7 +190,7 @@ const UPGRADES = {
 	"tome4": {
 		"icon": ICON_PATH + "book_4.png",
 		"displayname": "Tome",
-		"details": "Increases the size of attacks an additional 10% of their base size",
+		"details": "Attack Size +40%",
 		"level": "Level: 4",
 		"prerequisite": ["tome3"],
 		"type": "upgrade"
@@ -198,7 +198,7 @@ const UPGRADES = {
 	"scroll1": {
 		"icon": ICON_PATH + "scroll_1.png",
 		"displayname": "Scroll",
-		"details": "Decreases of the cooldown of attacks by an additional 5% of their base time",
+		"details": "Attack Cooldown -5%",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "upgrade"
@@ -206,7 +206,7 @@ const UPGRADES = {
 	"scroll2": {
 		"icon": ICON_PATH + "scroll_2.png",
 		"displayname": "Scroll",
-		"details": "Decreases of the cooldown of attacks by an additional 5% of their base time",
+		"details": "Attack Cooldown -10%",
 		"level": "Level: 2",
 		"prerequisite": ["scroll1"],
 		"type": "upgrade"
@@ -214,7 +214,7 @@ const UPGRADES = {
 	"scroll3": {
 		"icon": ICON_PATH + "scroll_3.png",
 		"displayname": "Scroll",
-		"details": "Decreases of the cooldown of attacks by an additional 5% of their base time",
+		"details": "Attack Cooldown -15%",
 		"level": "Level: 3",
 		"prerequisite": ["scroll2"],
 		"type": "upgrade"
@@ -222,7 +222,7 @@ const UPGRADES = {
 	"scroll4": {
 		"icon": ICON_PATH + "scroll_4.png",
 		"displayname": "Scroll",
-		"details": "Decreases of the cooldown of attacks by an additional 5% of their base time",
+		"details": "Attack Cooldown -20%",
 		"level": "Level: 4",
 		"prerequisite": ["scroll3"],
 		"type": "upgrade"
@@ -230,7 +230,7 @@ const UPGRADES = {
 	"ring1": {
 		"icon": ICON_PATH + "ring_1.png",
 		"displayname": "Ring",
-		"details": "Your attacks now spawn 1 more additional instance",
+		"details": "Attack Instance +1",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "upgrade"
@@ -238,7 +238,7 @@ const UPGRADES = {
 	"ring2": {
 		"icon": ICON_PATH + "ring_2.png",
 		"displayname": "Ring",
-		"details": "Your attacks now spawn an additional instance",
+		"details": "Attack Instance +2",
 		"level": "Level: 2",
 		"prerequisite": ["ring1"],
 		"type": "upgrade"

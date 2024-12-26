@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://ckumgxmeld8al" path="res://Textures/GUI/exp_progress.png" id="5_rfpw6"]
 [ext_resource type="Texture2D" uid="uid://7h5rqjgwdfu5" path="res://Textures/GUI/healthbar.png" id="8_557qh"]
 [ext_resource type="AudioStream" uid="uid://bn1sigua17psj" path="res://Audio/SoundEffect/anime-wow-sound-effect-mp3cut.mp3" id="8_qbl3g"]
-[ext_resource type="AudioStream" uid="uid://6e5syikbifq6" path="res://Audio/SoundEffect/sonic-extra-life.mp3" id="9_j1ha1"]
 [ext_resource type="Texture2D" uid="uid://baapn7jjg8chd" path="res://Textures/BasedPepe_Pointing.png" id="9_krem7"]
 [ext_resource type="Texture2D" uid="uid://bbuvtk0dt3d6n" path="res://Textures/GUI/health.png" id="9_ydo0t"]
 [ext_resource type="Texture2D" uid="uid://2mwi8w7m1um1" path="res://Textures/BasedPepe_Lose.png" id="10_34hxa"]
 [ext_resource type="AudioStream" uid="uid://c0gn66kn48fdv" path="res://Audio/SoundEffect/gmod-death.mp3" id="10_uce3s"]
+[ext_resource type="AudioStream" uid="uid://bwk6dqc5w48rb" path="res://Audio/SoundEffect/yeah-boiii-i-i-i.mp3" id="11_mgq8y"]
 [ext_resource type="PackedScene" uid="uid://cg1jppshpj4ig" path="res://Utility/basic_button.tscn" id="12_e3w0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x4ycy"]
@@ -250,7 +250,7 @@ stretch_mode = 5
 
 [node name="snd_victory" type="AudioStreamPlayer" parent="GUILayer/GUI/DeathPanel"]
 unique_name_in_owner = true
-stream = ExtResource("9_j1ha1")
+stream = ExtResource("11_mgq8y")
 volume_db = -10.0
 
 [node name="snd_lose" type="AudioStreamPlayer" parent="GUILayer/GUI/DeathPanel"]

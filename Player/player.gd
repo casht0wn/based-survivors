@@ -375,11 +375,11 @@ func death():
 	tween.tween_property(deathPanel,"position", Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 	tween.play()
 	if time >= 300:
-		lblResult.text = "You Win"
+		lblResult.text = "You Win!"
 		imgVictory.show()
 		sndVictory.play()
 	else:
-		lblResult.text = "You Lose"
+		lblResult.text = "You Lose!"
 		imgLose.show()
 		sndLose.play()
 		
